@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Found Time | Music Duo</title>
+<meta name="description" content="Found Time is a music duo writing love ballads for piano, strings, and voice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #EFF5F8;
+    --panel: #FFFFFF;
+    --panel-line: #D7E4EA;
+    --ivory: #23414F;
+    --ivory-dim: #5C7684;
+    --gold: #6FA3C4;
+    --gold-dim: #3E6E8E;
+    --rose: #A9C9D8;
+    --sand: #C9AF8C;
+    --max-w: 920px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--ivory);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--gold); color: var(--ink); }
+
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { color: var(--ivory); }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(239, 245, 248, 0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--panel-line);
+  }
+  nav .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .nav-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ivory-dim);
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 140px 0 110px;
+    text-align: center;
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(250, 252, 253, 0.65) 0%, rgba(250, 252, 253, 0.88) 55%, rgba(250, 252, 253, 0.97) 100%),
+      url('beach-piano.png') center 30% / cover no-repeat;
+  }
+  .hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 92px);
+    line-height: 0.98;
+    margin-bottom: 24px;
+  }
+  .hero p.tagline {
+    font-size: 18px;
+    color: var(--ivory-dim);
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+    max-width: 480px;
+    margin: 0 auto 44px;
+  }
+
+  /* ---------- Section shell ---------- */
+  section { padding: 90px 0; }
+  section + section { border-top: 1px solid var(--panel-line); }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 46px;
+  }
+  .section-head .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--gold-dim);
+    font-size: 15px;
+  }
+  .section-head h2 {
+    font-size: 32px;
+  }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .about-grid p { color: var(--ivory-dim); font-size: 16px; margin-bottom: 18px; }
+  .about-grid p:last-child { margin-bottom: 0; }
+  .pull {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ivory);
+    border-left: 1px solid var(--gold-dim);
+    padding-left: 24px;
+  }
+
+  /* ---------- Listen ---------- */
+  .track-list { display: flex; flex-direction: column; gap: 16px; }
+  .track {
+    border: 1px solid var(--panel-line);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: border-color 0.2s ease;
+  }
+  .track:hover { border-color: var(--gold-dim); }
+  .track-name { font-family: 'Fraunces', serif; font-size: 18px; }
+  .track-sub { font-size: 13px; color: var(--ivory-dim); margin-top: 4px; }
+  .track-link {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--gold-dim);
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+  .track-link:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+
+  .embed-note {
+    margin-top: 28px;
+    font-size: 13px;
+    color: var(--ivory-dim);
+    border-left: 1px solid var(--panel-line);
+    padding-left: 16px;
+  }
+  .embed-note code {
+    background: var(--panel);
+    padding: 2px 6px;
+    font-size: 12px;
+    color: var(--gold);
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .gallery-item {
+    aspect-ratio: 4/5;
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .gallery-item span {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ivory-dim);
+    line-height: 1.6;
+  }
+  .gallery-item:nth-child(2) { grid-row: span 2; aspect-ratio: auto; }
+
+  /* ---------- Contact ---------- */
+  .contact { text-align: center; }
+  .contact h2 { font-size: 36px; margin-bottom: 18px; }
+  .contact p { color: var(--ivory-dim); max-width: 440px; margin: 0 auto 36px; }
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ivory-dim);
+    border-top: 1px solid var(--panel-line);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item:nth-child(2) { grid-row: span 1; }
+    .nav-links { display: none; }
+    .hero { padding: 90px 0 60px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nav-mark">Found&nbsp;Time</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#listen">Listen</a></li>
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A duet, however brief the hour</p>
+    <h1>Found Time</h1>
+    <p class="tagline">Love ballads for voice and piano, from two friends who found their way back to the bench.</p>
+    <p class="eyebrow" style="margin-top: -18px; margin-bottom: 30px; font-size: 11px; letter-spacing: 0.18em;">Emily Eddey &amp; Laura Allen</p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head"><span class="num">01</span><h2>About</h2></div>
+      <p>Found Time began the way most good things do, without a plan. Two longtime friends, both buried in other lives, kept circling back to their piano bench whenever a free hour turned up.</p>
+      <p>What started as a cover, traded back and forth for the fun of it, became a reason to keep finding the hour. For now, that means love ballads built on piano and voice, with the particular blend that only happens when two people have known each other long enough to stop performing. Original songs are next; the covers are just where the hour started.</p>
+    </div>
+    <p class="pull">"We're not chasing a sound. We're chasing the hour we almost didn't have."</p>
+  </div>
+</section>
+
+<section id="listen">
+  <div class="wrap">
+    <div class="section-head"><span class="num">02</span><h2>Listen</h2></div>
+    <div class="track-list">
+      <div class="track">
+        <div>
+          <div class="track-name">Track title</div>
+          <div class="track-sub">Single · 2026</div>
+        </div>
+        <a class="track-link" href="#">Play</a>
+      </div>
+      <div class="track">
+        <div>
+          <div class="track-name">Track title</div>
+          <div class="track-sub">Single · 2026</div>
+        </div>
+        <a class="track-link" href="#">Play</a>
+      </div>
+    </div>
+    <p class="embed-note">
+      Replace each track's link with your Spotify, SoundCloud, or Bandcamp URL, or drop an embed
+      (e.g. <code>&lt;iframe src="https://open.spotify.com/embed/track/..."&gt;</code>) directly
+      into a <code>.track</code> block once your music is live.
+    </p>
+    <p style="margin-top: 28px; font-size: 13px; color: var(--ivory-dim); letter-spacing: 0.02em;">
+      Mixed by Josh Gannet
+    </p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head"><span class="num">03</span><h2>Photos</h2></div>
+    <div class="gallery">
+      <div class="gallery-item"><span>Photo 1<br>Replace with your image</span></div>
+      <div class="gallery-item"><span>Photo 2<br>Replace with your image</span></div>
+      <div class="gallery-item"><span>Photo 3<br>Replace with your image</span></div>
+      <div class="gallery-item"><span>Photo 4<br>Replace with your image</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="section-head" style="justify-content: center;"><span class="num">04</span><h2>Get in touch</h2></div>
+    <p>Say hello, or follow along as the songs come together.</p>
+    <div class="social-row">
+      <a href="mailto:hello@foundtimemusic.com">Email</a>
+      <a href="#">Instagram</a>
+      <a href="#">Spotify</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Found Time &nbsp;·&nbsp; foundtimemusic.com
+</footer>
+
+</body>
+</html>
