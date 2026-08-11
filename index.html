@@ -7,27 +7,24 @@
 <meta name="description" content="Found Time is a music duo writing love ballads for piano, strings, and voice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #EFF5F8;
-    --panel: #FFFFFF;
-    --panel-line: #D7E4EA;
-    --ivory: #23414F;
-    --ivory-dim: #5C7684;
-    --gold: #6FA3C4;
-    --gold-dim: #3E6E8E;
-    --rose: #A9C9D8;
-    --sand: #C9AF8C;
+    --ink: #002930;
+    --panel: rgba(255, 255, 255, 0.06);
+    --panel-line: rgba(255, 255, 255, 0.16);
+    --ivory: #EAFCFF;
+    --ivory-dim: #8FD9E8;
+    --gold: #00AECC;
+    --gold-dim: #0090A8;
+    --rose: #00D8FC;
+    --sand: #00AECC;
     --max-w: 920px;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
   body {
-    background: var(--ink);
+    background: linear-gradient(180deg, #013640 0%, #002930 45%, #002228 75%, #001820 100%);
+    background-attachment: fixed;
     color: var(--ivory);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -35,7 +32,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  ::selection { background: var(--gold); color: var(--ink); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  ::selection { background: var(--gold); color: var(--ivory); }
 
   a { color: var(--gold); text-decoration: none; }
   a:hover { color: var(--ivory); }
@@ -47,7 +48,7 @@
   }
 
   h1, h2, h3 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Caveat', cursive;
     font-weight: 400;
     letter-spacing: -0.01em;
   }
@@ -57,7 +58,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(239, 245, 248, 0.88);
+    background: rgba(0, 41, 48, 0.82);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--panel-line);
   }
@@ -68,10 +69,10 @@
     height: 64px;
   }
   .nav-mark {
-    font-family: 'Fraunces', serif;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
   }
   .nav-links {
     display: flex;
@@ -92,7 +93,7 @@
     text-align: center;
     position: relative;
     background:
-      linear-gradient(180deg, rgba(250, 252, 253, 0.65) 0%, rgba(250, 252, 253, 0.88) 55%, rgba(250, 252, 253, 0.97) 100%),
+      linear-gradient(180deg, rgba(1, 54, 64, 0.5) 0%, rgba(0, 41, 48, 0.8) 55%, rgba(0, 34, 40, 0.95) 100%),
       url('beach-piano.png') center 30% / cover no-repeat;
   }
   .hero .eyebrow {
@@ -103,15 +104,17 @@
     margin-bottom: 22px;
   }
   .hero h1 {
-    font-size: clamp(48px, 9vw, 92px);
-    line-height: 0.98;
-    margin-bottom: 24px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: clamp(64px, 12vw, 128px);
+    line-height: 1.05;
+    margin-bottom: 20px;
   }
   .hero p.tagline {
-    font-size: 18px;
+    font-size: 26px;
     color: var(--ivory-dim);
-    font-style: italic;
-    font-family: 'Fraunces', serif;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
     max-width: 480px;
     margin: 0 auto 44px;
   }
@@ -127,13 +130,14 @@
     margin-bottom: 46px;
   }
   .section-head .num {
-    font-family: 'Fraunces', serif;
+    font-family: 'Caveat', cursive;
     font-style: italic;
     color: var(--gold-dim);
     font-size: 15px;
   }
   .section-head h2 {
-    font-size: 32px;
+    font-size: 42px;
+    font-weight: 600;
   }
 
   /* ---------- About ---------- */
@@ -146,10 +150,10 @@
   .about-grid p { color: var(--ivory-dim); font-size: 16px; margin-bottom: 18px; }
   .about-grid p:last-child { margin-bottom: 0; }
   .pull {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 22px;
-    line-height: 1.5;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
     color: var(--ivory);
     border-left: 1px solid var(--gold-dim);
     padding-left: 24px;
@@ -167,7 +171,7 @@
     transition: border-color 0.2s ease;
   }
   .track:hover { border-color: var(--gold-dim); }
-  .track-name { font-family: 'Fraunces', serif; font-size: 18px; }
+  .track-name { font-family: 'Caveat', cursive; font-size: 18px; }
   .track-sub { font-size: 13px; color: var(--ivory-dim); margin-top: 4px; }
   .track-link {
     font-size: 12px;
@@ -177,7 +181,7 @@
     padding: 8px 16px;
     white-space: nowrap;
   }
-  .track-link:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .track-link:hover { background: var(--gold); color: var(--ivory); border-color: var(--gold); }
 
   .embed-note {
     margin-top: 28px;
@@ -253,12 +257,10 @@
 
 <nav>
   <div class="wrap">
-    <span class="nav-mark">Found&nbsp;Time</span>
+    <span class="nav-mark">Found&nbsp;Time&nbsp;Music</span>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#listen">Listen</a></li>
-      <li><a href="#gallery">Photos</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -302,38 +304,9 @@
         <a class="track-link" href="#">Play</a>
       </div>
     </div>
-    <p class="embed-note">
-      Replace each track's link with your Spotify, SoundCloud, or Bandcamp URL, or drop an embed
-      (e.g. <code>&lt;iframe src="https://open.spotify.com/embed/track/..."&gt;</code>) directly
-      into a <code>.track</code> block once your music is live.
-    </p>
     <p style="margin-top: 28px; font-size: 13px; color: var(--ivory-dim); letter-spacing: 0.02em;">
       Mixed by Josh Gannet
     </p>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="wrap">
-    <div class="section-head"><span class="num">03</span><h2>Photos</h2></div>
-    <div class="gallery">
-      <div class="gallery-item"><span>Photo 1<br>Replace with your image</span></div>
-      <div class="gallery-item"><span>Photo 2<br>Replace with your image</span></div>
-      <div class="gallery-item"><span>Photo 3<br>Replace with your image</span></div>
-      <div class="gallery-item"><span>Photo 4<br>Replace with your image</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap contact">
-    <div class="section-head" style="justify-content: center;"><span class="num">04</span><h2>Get in touch</h2></div>
-    <p>Say hello, or follow along as the songs come together.</p>
-    <div class="social-row">
-      <a href="mailto:hello@foundtimemusic.com">Email</a>
-      <a href="#">Instagram</a>
-      <a href="#">Spotify</a>
-    </div>
   </div>
 </section>
 
