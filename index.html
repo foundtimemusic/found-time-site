@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
     --sand: #00AECC;
     --max-w: 920px;
   }
-
+ 
   body {
     background: linear-gradient(180deg, #013640 0%, #002930 45%, #002228 75%, #001820 100%);
     background-attachment: fixed;
@@ -31,28 +32,28 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   ::selection { background: var(--gold); color: var(--ivory); }
-
+ 
   a { color: var(--gold); text-decoration: none; }
   a:hover { color: var(--ivory); }
-
+ 
   .wrap {
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 0 32px;
   }
-
+ 
   h1, h2, h3 {
     font-family: 'Caveat', cursive;
     font-weight: 400;
     letter-spacing: -0.01em;
   }
-
+ 
   /* ---------- Nav ---------- */
   nav {
     position: sticky;
@@ -86,7 +87,7 @@
     color: var(--ivory-dim);
   }
   .nav-links a:hover { color: var(--gold); }
-
+ 
   /* ---------- Hero ---------- */
   .hero {
     padding: 140px 0 110px;
@@ -118,11 +119,11 @@
     max-width: 480px;
     margin: 0 auto 44px;
   }
-
+ 
   /* ---------- Section shell ---------- */
   section { padding: 90px 0; }
   section + section { border-top: 1px solid var(--panel-line); }
-
+ 
   .section-head {
     display: flex;
     align-items: baseline;
@@ -139,7 +140,7 @@
     font-size: 42px;
     font-weight: 600;
   }
-
+ 
   /* ---------- About ---------- */
   .about-grid {
     display: grid;
@@ -158,7 +159,7 @@
     border-left: 1px solid var(--gold-dim);
     padding-left: 24px;
   }
-
+ 
   /* ---------- Listen ---------- */
   .track-list { display: flex; flex-direction: column; gap: 16px; }
   .track {
@@ -173,6 +174,11 @@
   .track:hover { border-color: var(--gold-dim); }
   .track-name { font-family: 'Caveat', cursive; font-size: 18px; }
   .track-sub { font-size: 13px; color: var(--ivory-dim); margin-top: 4px; }
+  .track-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
   .track-link {
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -182,7 +188,7 @@
     white-space: nowrap;
   }
   .track-link:hover { background: var(--gold); color: var(--ivory); border-color: var(--gold); }
-
+ 
   .embed-note {
     margin-top: 28px;
     font-size: 13px;
@@ -196,7 +202,7 @@
     font-size: 12px;
     color: var(--gold);
   }
-
+ 
   /* ---------- Gallery ---------- */
   .gallery {
     display: grid;
@@ -221,7 +227,7 @@
     line-height: 1.6;
   }
   .gallery-item:nth-child(2) { grid-row: span 2; aspect-ratio: auto; }
-
+ 
   /* ---------- Contact ---------- */
   .contact { text-align: center; }
   .contact h2 { font-size: 36px; margin-bottom: 18px; }
@@ -234,7 +240,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
-
+ 
   footer {
     padding: 40px 0;
     text-align: center;
@@ -243,7 +249,7 @@
     border-top: 1px solid var(--panel-line);
     letter-spacing: 0.04em;
   }
-
+ 
   @media (max-width: 720px) {
     .about-grid { grid-template-columns: 1fr; }
     .gallery { grid-template-columns: repeat(2, 1fr); }
@@ -254,7 +260,7 @@
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="wrap">
     <span class="nav-mark">Found&nbsp;Time&nbsp;Music</span>
@@ -264,32 +270,30 @@
     </ul>
   </div>
 </nav>
-
+ 
 <header class="hero">
   <div class="wrap">
+    <p class="eyebrow">A duet, however brief the hour</p>
     <h1>Found Time</h1>
-    <p class="tagline">Longtime friends who found their way back to the bench.</p>
+    <p class="tagline">Love ballads for voice and piano, from two friends who found their way back to the bench.</p>
     <p class="eyebrow" style="margin-top: -18px; margin-bottom: 30px; font-size: 11px; letter-spacing: 0.18em;">Emily Eddey &amp; Laura Allen</p>
   </div>
 </header>
-
+ 
 <section id="listen">
   <div class="wrap">
     <div class="section-head"><span class="num">01</span><h2>Listen</h2></div>
     <div class="track-list">
       <div class="track">
         <div>
-          <div class="track-name">Track title</div>
-          <div class="track-sub">Single · 2026</div>
+          <div class="track-name">I'll Set The Table</div>
+          <div class="track-sub">Cover &middot; originally by Nic D</div>
         </div>
-        <a class="track-link" href="#">Play</a>
-      </div>
-      <div class="track">
-        <div>
-          <div class="track-name">Track title</div>
-          <div class="track-sub">Single · 2026</div>
+        <div class="track-links">
+          <a class="track-link" href="https://open.spotify.com/artist/6dXssYXJ3r0kAshPtGQSCc" target="_blank" rel="noopener">Spotify</a>
+          <a class="track-link" href="https://music.youtube.com/watch?v=koyb0L4t7VQ" target="_blank" rel="noopener">YouTube Music</a>
+          <a class="track-link" href="https://music.apple.com/us/album/ill-set-the-table-single/6803798442" target="_blank" rel="noopener">Apple Music</a>
         </div>
-        <a class="track-link" href="#">Play</a>
       </div>
     </div>
     <p style="margin-top: 28px; font-size: 13px; color: var(--ivory-dim); letter-spacing: 0.02em;">
@@ -297,20 +301,24 @@
     </p>
   </div>
 </section>
-
+ 
 <section id="about">
   <div class="wrap about-grid">
     <div>
       <div class="section-head"><span class="num">02</span><h2>About</h2></div>
-      <p>Found Time began the way most good things do, without a plan. 
-            <p> Just two working moms determined to find those incredibly small pockets of time to make something that brings them joy. Cover songs for now, originals to come! </p>
+      <p>Found Time began the way most good things do, without a plan. Two longtime friends, both buried in other lives, kept circling back to their piano bench whenever a small pocket of time turned up.</p>
+      <p>What started as a cover, traded back and forth for the fun of it, became a reason to keep finding the time. For now, that means love ballad covers built on piano and voice. </p>
     </div>
+    <p class="pull">&ldquo;We're not chasing a sound. We're chasing the time for ourselves to make what we love.&rdquo;</p>
   </div>
 </section>
-
+ 
 <footer>
   Found Time &nbsp;·&nbsp; foundtimemusic.com
 </footer>
+ 
+</body>
+</html>
 
 </body>
 </html>
